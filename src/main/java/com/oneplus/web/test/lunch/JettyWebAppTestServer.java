@@ -1,6 +1,7 @@
 package com.oneplus.web.test.lunch;
 
 import com.oneplus.web.test.WebAppTestServer;
+import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -24,7 +25,7 @@ public class JettyWebAppTestServer extends WebAppLunchConfigureLoader implements
     /**
      * Jetty服务器
      */
-    private Server jettyServer;
+    private Server server;
 
     /**
      * 启动jetty
@@ -32,23 +33,25 @@ public class JettyWebAppTestServer extends WebAppLunchConfigureLoader implements
     public void start() {
         try {
 
-            jettyServer = new Server();
+            server = new Server();
+            server.setStopAtShutdown(true);
 
             int port = Integer.parseInt(getProperties().getProperty(WEB_APP_PORT));
-            ServerConnector connector = new ServerConnector(jettyServer);
+            ServerConnector connector = new ServerConnector(server);
             connector.setPort(port);
-            jettyServer.addConnector(connector);
+            connector.setReuseAddress(false);
+            server.setConnectors(new Connector[]{connector});
 
             String contextPath = getProperties().getProperty(CONTEXT_PATH);
             String webApp = getProperties().getProperty(WEB_APP_PATH);
 
             WebAppContext waContext = new WebAppContext(webApp, contextPath);
             waContext.getInitParams().put("org.eclipse.jetty.servlet.Default.useFileMappedBuffer", "false");
-            jettyServer.setStopAtShutdown(true);
-            jettyServer.setHandler(waContext);
+            server.setStopAtShutdown(true);
+            server.setHandler(waContext);
 
-            jettyServer.start();
-            jettyServer.join();
+            server.start();
+            server.join();
 
             LOGGER.info("启动jetty web服务成功.");
 
