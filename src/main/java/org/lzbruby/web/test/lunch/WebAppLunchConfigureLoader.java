@@ -1,4 +1,4 @@
-package com.oneplus.web.test.lunch;
+package org.lzbruby.web.test.lunch;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
@@ -12,7 +12,7 @@ import java.util.Properties;
  * 功能描述：启动容器配置加载器
  *
  * @author: Zhenbin.Li
- * email： lizhenbin@oneplus.cn
+ * email： lizhenbin08@sina.com
  * company：一加科技
  * Date: 15/11/16 Time: 18:51
  */

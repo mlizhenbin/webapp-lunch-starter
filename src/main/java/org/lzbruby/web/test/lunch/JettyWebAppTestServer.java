@@ -1,6 +1,6 @@
-package com.oneplus.web.test.lunch;
+package org.lzbruby.web.test.lunch;
 
-import com.oneplus.web.test.WebAppTestServer;
+import org.lzbruby.web.test.WebAppTestServer;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;

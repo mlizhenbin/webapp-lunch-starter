@@ -1,13 +1,13 @@
 package start;
 
-import com.oneplus.web.test.WebAppTestServer;
-import com.oneplus.web.test.lunch.JettyWebAppTestServer;
+import org.lzbruby.web.test.WebAppTestServer;
+import org.lzbruby.web.test.lunch.JettyWebAppTestServer;
 
 /**
  * 功能描述：jetty测试启动器
  *
  * @author: Zhenbin.Li
- * email： lizhenbin@oneplus.cn
+ * email： lizhenbin08@sina.com
  * company：一加科技
  * Date: 15/8/24 Time: 16:15
  */
