@@ -8,7 +8,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <artifactId>webapp-lunch</artifactId>
-    <name>webapp-lunch</name>
+    <name>webapp</name>
     <url>http://maven.apache.org</url>
 
     <properties>

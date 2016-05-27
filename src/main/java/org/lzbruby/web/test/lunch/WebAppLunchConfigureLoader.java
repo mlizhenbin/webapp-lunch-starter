@@ -13,7 +13,7 @@ import java.util.Properties;
  *
  * @author: Zhenbin.Li
  * email： lizhenbin08@sina.com
- * company：一加科技
+ * company：lzbruby
  * Date: 15/11/16 Time: 18:51
  */
 public abstract class WebAppLunchConfigureLoader {

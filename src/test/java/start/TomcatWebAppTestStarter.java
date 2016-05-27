@@ -8,7 +8,7 @@ import org.lzbruby.web.test.lunch.TomcatWebAppTestServer;
  *
  * @author: Zhenbin.Li
  * email： lizhenbin08@sina.com
- * company：一加科技
+ * company：lzbruby
  * Date: 15/8/24 Time: 16:15
  */
 public class TomcatWebAppTestStarter {
